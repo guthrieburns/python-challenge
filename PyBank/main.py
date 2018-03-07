@@ -18,15 +18,15 @@ with open(bank_csv, newline="") as csvfile:
     date.remove("Date")
     revenue.remove("Revenue")
 
-    total_months = len(date) - 1
-    
+    total_months = len(date)
     total_revenue = sum(Decimal(i) for i in revenue)
+    average_revenue = total_revenue/40
 
     print("Financial Analysis")
     print("----------------------------")
     print("Total Months: " + str(total_months))
-    print("Total Revenue: " + str(total_revenue))
-    print("Average Revenue Change: ")
+    print("Total Revenue: $" + str(total_revenue))
+    print("Average Revenue Change: $" + str(average_revenue))
     print("Greatest Increase in Revenue: ")
     print("Greatest Decrease in Revenue: ")
     
