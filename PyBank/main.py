@@ -22,15 +22,20 @@ with open(bank_csv, newline="") as csvfile:
     total_revenue = sum(Decimal(i) for i in revenue)
     average_revenue = total_revenue/40
 
+    revenue = list(map(int, revenue))
+
+    max_revenue = max(revenue)
+    min_revenue = min(revenue)
+
     print("Financial Analysis")
     print("----------------------------")
     print("Total Months: " + str(total_months))
     print("Total Revenue: $" + str(total_revenue))
     print("Average Revenue Change: $" + str(average_revenue))
-    print("Greatest Increase in Revenue: ")
-    print("Greatest Decrease in Revenue: ")
+    print("Greatest Increase in Revenue: $" + str(max_revenue))
+    print("Greatest Decrease in Revenue: $" + str(min_revenue))
     
-    #print(str(sum_of_revenue))
+    
 
 #new_csv = zip(date, revenue)
 
