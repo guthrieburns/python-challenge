@@ -27,13 +27,19 @@ with open(bank_csv, newline="") as csvfile:
     max_revenue = max(revenue)
     min_revenue = min(revenue)
 
+    max_index = revenue.index(max(revenue))
+    max_date = date[max_index]
+    
+    min_index = revenue.index(min(revenue))
+    min_date = date[min_index]
+
     print("Financial Analysis")
     print("----------------------------")
     print("Total Months: " + str(total_months))
     print("Total Revenue: $" + str(total_revenue))
     print("Average Revenue Change: $" + str(average_revenue))
-    print("Greatest Increase in Revenue: $" + str(max_revenue))
-    print("Greatest Decrease in Revenue: $" + str(min_revenue))
+    print("Greatest Increase in Revenue: ($" + str(max_revenue) + ") " + str(max_date))
+    print("Greatest Decrease in Revenue: ($" + str(min_revenue) + ") " + str(min_date))
     
     
 
