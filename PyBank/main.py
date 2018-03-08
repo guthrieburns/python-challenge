@@ -2,11 +2,13 @@ import os
 import csv
 from decimal import *
 
+
 bank_csv = os.path.join("Resources", "budget_data_1.csv")
 
 date = []
 revenue = []
 
+#reading the csv and adding to lists
 with open(bank_csv, newline="") as csvfile:
     csvreader= csv.reader(csvfile, delimiter=",")
     for row in csvreader:
@@ -15,21 +17,26 @@ with open(bank_csv, newline="") as csvfile:
 
         revenue.append(row[1])
 
+    #removing the headers
     date.remove("Date")
     revenue.remove("Revenue")
 
+    #finding total months, total revenue and average
     total_months = len(date)
     total_revenue = sum(Decimal(i) for i in revenue)
     average_revenue = total_revenue/40
 
     revenue = list(map(int, revenue))
 
+    #finding max and min revenue values and saving them to variables
     max_revenue = max(revenue)
     min_revenue = min(revenue)
 
+    #find max date using index
     max_index = revenue.index(max(revenue))
     max_date = date[max_index]
     
+    #finding min date using index
     min_index = revenue.index(min(revenue))
     min_date = date[min_index]
 #comment
