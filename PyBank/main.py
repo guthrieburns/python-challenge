@@ -32,7 +32,7 @@ with open(bank_csv, newline="") as csvfile:
     
     min_index = revenue.index(min(revenue))
     min_date = date[min_index]
-
+#comment
     print("Financial Analysis")
     print("----------------------------")
     print("Total Months: " + str(total_months))
