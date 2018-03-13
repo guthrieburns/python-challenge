@@ -30,3 +30,7 @@ with open(poll_csv, newline="") as csvfile:
     print("---------------------")
     print("Total Votes:" + str(total_votes))
     print("---------------------")
+    print("Correy: ")
+    print("Khan: ")
+    print("Li: ")
+    print("O'Tooley: ")
