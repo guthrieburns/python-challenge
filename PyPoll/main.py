@@ -26,6 +26,10 @@ with open(poll_csv, newline="") as csvfile:
 
     total_votes = len(voter)
 
+    for i in candidate
+        cand_1 = i
+        if i 
+
     print("Election Results")
     print("---------------------")
     print("Total Votes:" + str(total_votes))
